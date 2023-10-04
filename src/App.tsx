@@ -1,7 +1,14 @@
+import { Button } from './components/Button'
 export function  App() {
   return (
    
-      <h1>Ignite timer</h1>
+      <>
+        <Button variant="danger"/>
+        <Button variant="primary" />
+        <Button variant="secundary" />
+        <Button variant="sucess" />
+        <Button  />
+      </>
     
   )
 }
