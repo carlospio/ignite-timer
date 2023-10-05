@@ -2,15 +2,21 @@ import {Play} from 'phosphor-react'
 import { CountdownContainer, FormContainer, HomeContainer, Separator, StartCountdownButton, MinutesAmountInput, TaskInput } from './styles'
 
 export function Home() {
+    function hangleSubmit(event){
+        event.target.task.value
+    }
+
     return (
         <HomeContainer>
-            <form action="">
+            <form onSubmit={hangleSubmit} action="">
                 <FormContainer>
                     <label htmlFor="task">Vou trabalhar em</label>
                     <TaskInput 
-                        id="task" 
+                        id="task"
+                        name="task" 
                         placeholder="Dê um nome para o seu projeto" 
                         list="task-suggestion"
+
 
                     />
 
@@ -52,7 +58,7 @@ export function Home() {
 
                 <StartCountdownButton
                     type="submit"
-                    disabled
+                    disabled={!task}
 
                 >
                     <Play size={24} />
