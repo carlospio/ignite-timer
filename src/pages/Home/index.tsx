@@ -52,7 +52,7 @@ export function Home() {
 
                 <StartCountdownButton
                     type="submit"
-                    
+                    disabled
 
                 >
                     <Play size={24} />
